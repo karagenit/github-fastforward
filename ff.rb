@@ -16,13 +16,7 @@ unless `git branch`.include? parent
 
     data = http.request(request).body
 
-    puts JSON.pretty_generate(JSON.parse(data))
-
-    parent = JSON.parse(data)['parent']
-
-    puts parent
-
-    exit
+    url = JSON.parse(data)['parent']['html_url']
 
     `git remote add #{parent} #{url}`
 end
