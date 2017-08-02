@@ -7,7 +7,9 @@ require "json"
 parent = "upstream"
 repo = `git config --get remote.origin.url`.sub(/https:\/\/github.com\//, '').chomp
 
-unless `git branch`.include? parent
+unless `git remote`.include? parent
+
+    puts "Adding remote #{parent}"
 
     uri = URI.parse(URI.encode("https://api.github.com/repos/#{repo}")) #TODO i think encode is only necessary w/o repo.chomp
     http = Net::HTTP.new(uri.host, uri.port)
