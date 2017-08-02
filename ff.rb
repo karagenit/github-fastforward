@@ -9,7 +9,7 @@ repo = `git config --get remote.origin.url`.sub(/https:\/\/github.com\//, '').ch
 
 unless `git remote`.include? parent
 
-    puts "Adding remote #{parent}"
+    puts "Adding remote #{parent}..."
 
     uri = URI.parse(URI.encode("https://api.github.com/repos/#{repo}")) #TODO i think encode is only necessary w/o repo.chomp
     http = Net::HTTP.new(uri.host, uri.port)
@@ -18,7 +18,14 @@ unless `git remote`.include? parent
 
     data = http.request(request).body
 
-    url = JSON.parse(data)['parent']['html_url']
+    pdata = JSON.parse(data)['parent']
+
+    if pdata == nil
+        puts "Not a fork!"
+        exit
+    end
+
+    url = pdata['html_url']
 
     `git remote add #{parent} #{url}`
 end
