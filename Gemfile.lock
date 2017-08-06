@@ -1,12 +1,15 @@
 GIT
   remote: https://github.com/karagenit/github-upstream
-  revision: 2a377803d59b03a8a3b886ef74cfe5c7a81e39a7
+  revision: d2d024345fdb4596297a838b05e6b25b167db488
+  tag: v1.1.0
   specs:
-    upstream (0.0.0)
+    upstream (1.1.0)
+      json (~> 2.1)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    json (2.1.0)
 
 PLATFORMS
   ruby
