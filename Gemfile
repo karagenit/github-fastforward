@@ -1,3 +1,1 @@
-source "https://rubygems.org"
-
-gem 'json', '~> 2.1'
+gem 'upstream', :git => 'https://github.com/karagenit/github-upstream'

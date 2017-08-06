@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
-require "./upstream.rb"
+require "rubygems"
+require "bundler/setup"
+require "upstream"
 
 parent = "upstream"
 repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp

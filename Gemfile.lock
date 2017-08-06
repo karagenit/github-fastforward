@@ -1,13 +1,18 @@
+GIT
+  remote: https://github.com/karagenit/github-upstream
+  revision: 2a377803d59b03a8a3b886ef74cfe5c7a81e39a7
+  specs:
+    upstream (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    json (2.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  json (~> 2.1)
+  upstream!
 
 BUNDLED WITH
    1.15.1
