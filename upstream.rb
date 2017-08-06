@@ -6,11 +6,10 @@ require "json"
 
 def get_upstream(repo)
 
-    repo = repo[/\A[A-Za-z0-9.-]+\/[A-Za-z0-9.-]+\z/]
+    #repo = repo[/\A[A-Za-z0-9.-]+\/[A-Za-z0-9.-]+\z/]
 
-    if repo = nil
-        return nil
-    end
+    raise ArgumentError, "Invalid Repo", caller if 
+        (repo.nil? || !(repo =~ /\A[A-Za-z0-9.-]+\/[A-Za-z0-9.-]+\z/))
 
     uri = URI.parse("https://api.github.com/repos/#{repo}")
     http = Net::HTTP.new(uri.host, uri.port)
