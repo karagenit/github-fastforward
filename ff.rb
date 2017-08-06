@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 
-require "net/http"
-require "uri"
-require "json"
+require "./upstream.rb"
 
 parent = "upstream"
 repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp
@@ -11,21 +9,12 @@ unless `git remote`.include? parent
 
     puts "Adding remote #{parent}..."
 
-    uri = URI.parse("https://api.github.com/repos/#{repo}")
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    request = Net::HTTP::Get.new(uri.request_uri)
+    url = get_upstream(repo)
 
-    body = http.request(request).body
-
-    data = JSON.parse(body)['parent']
-
-    if data == nil
+    if url == nil
         puts "Not a fork!"
         exit
     end
-
-    url = data['html_url']
 
     `git remote add #{parent} #{url}`
 end
