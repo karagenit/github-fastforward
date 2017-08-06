@@ -5,6 +5,13 @@ require "uri"
 require "json"
 
 def get_upstream(repo)
+
+    repo = repo[/\A[A-Za-z0-9.-]+\/[A-Za-z0-9.-]+\z/]
+
+    if repo = nil
+        return nil
+    end
+
     uri = URI.parse("https://api.github.com/repos/#{repo}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
