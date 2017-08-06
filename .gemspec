@@ -7,8 +7,9 @@ Gem::Specification.new do |s|
     s.homepage      = 'https://github.com/karagenit/github-fastforward'
     s.author        = 'Caleb Smith'
     s.email         = 'karagenit@outlook.com'
-    s.files         = ['bin/ff.rb']
+    s.files         = ['bin/github-fastforward']
     s.require_paths = ['bin/']
+    s.executables   << 'github-fastforward'
     s.platform      = Gem::Platform::RUBY
 
     s.add_development_dependency 'bundler',     '~> 1.15'
