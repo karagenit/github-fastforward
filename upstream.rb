@@ -23,3 +23,7 @@ def get_upstream(repo)
 
     return data['html_url']
 end
+
+if __FILE__ == $0
+    puts get_upstream(ARGV[0])
+end
