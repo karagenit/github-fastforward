@@ -5,7 +5,7 @@ require "uri"
 require "json"
 
 parent = "upstream"
-repo = `git config --get remote.origin.url`.sub(/https:\/\/github.com\//, '').chomp
+repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp
 
 unless `git remote`.include? parent
 
