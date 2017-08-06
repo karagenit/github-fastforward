@@ -11,7 +11,7 @@ unless `git remote`.include? parent
 
     puts "Adding remote #{parent}..."
 
-    uri = URI.parse(URI.encode("https://api.github.com/repos/#{repo}")) #TODO i think encode is only necessary w/o repo.chomp
+    uri = URI.parse("https://api.github.com/repos/#{repo}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     request = Net::HTTP::Get.new(uri.request_uri)
