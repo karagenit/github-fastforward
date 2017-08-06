@@ -16,16 +16,16 @@ unless `git remote`.include? parent
     http.use_ssl = true
     request = Net::HTTP::Get.new(uri.request_uri)
 
-    data = http.request(request).body
+    body = http.request(request).body
 
-    pdata = JSON.parse(data)['parent']
+    data = JSON.parse(body)['parent']
 
-    if pdata == nil
+    if data == nil
         puts "Not a fork!"
         exit
     end
 
-    url = pdata['html_url']
+    url = data['html_url']
 
     `git remote add #{parent} #{url}`
 end
