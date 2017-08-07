@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/karagenit/github-upstream
-  revision: d2d024345fdb4596297a838b05e6b25b167db488
-  tag: v1.1.0
+  revision: c04b793d515a08657a1d05c75f5dac1bc78da5f8
+  tag: v1.1.3
   specs:
-    upstream (1.1.0)
+    upstream (1.1.3)
       json (~> 2.1)
 
 PATH
