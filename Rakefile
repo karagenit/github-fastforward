@@ -10,5 +10,5 @@ task :install do
 end
 
 task :clean do
-    system "gem uninstall github-fastforward-0.0.0.gem"
+    system "gem uninstall github-fastforward"
 end
