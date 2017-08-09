@@ -6,7 +6,7 @@ task :build do
 end
 
 task :install do
-    system "gem install github-fastforward-0.0.0.gem"
+    system "gem install github-fastforward-" + IO.read('version.txt') + ".gem"
 end
 
 task :clean do

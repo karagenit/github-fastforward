@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name          = 'github-fastforward'
-    s.version       = '0.0.0'
+    s.version       = IO.read('version.txt')
     s.license       = 'MIT'
     s.summary       = 'Github Fastforward'
     s.description   = 'Automatically Add Upstream Branch & Rebase Current Branch'
