@@ -6,11 +6,11 @@ task :build do
 end
 
 task :install do
-    system "gem install github-fastforward-" + IO.read('version.txt') + ".gem"
+    system "gem install github_fastforward-" + IO.read('version.txt') + ".gem"
 end
 
 task :clean do
-    system "gem uninstall github-fastforward"
+    system "gem uninstall github_fastforward"
     system "rm *.gem"
 end
 

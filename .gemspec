@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-    s.name          = 'github-fastforward'
+    s.name          = 'github_fastforward'
     s.version       = IO.read('version.txt')
     s.license       = 'MIT'
     s.summary       = 'Github Fastforward'
@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
     s.homepage      = 'https://github.com/karagenit/github-fastforward'
     s.author        = 'Caleb Smith'
     s.email         = 'karagenit@outlook.com'
-    s.files         = ['bin/github-fastforward']
+    s.files         = ['bin/github_fastforward']
     s.require_paths = ['bin/']
-    s.executables   << 'github-fastforward'
+    s.executables   << 'github_fastforward'
     s.platform      = Gem::Platform::RUBY
 
     s.add_runtime_dependency     'octokit',     '~> 4.7'
