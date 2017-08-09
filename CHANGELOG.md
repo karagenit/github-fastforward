@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
+
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v1.0.0...HEAD)
+
+**Closed issues:**
+
+- Handle Error if No .git/ Directory [\#12](https://github.com/karagenit/github-fastforward/issues/12)
+
 ## [v1.0.0](https://github.com/karagenit/github-fastforward/tree/v1.0.0) (2017-08-09)
 **Closed issues:**
 

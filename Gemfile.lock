@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    github-fastforward (1.0.0)
+    github-fastforward (1.0.1)
       octokit (~> 4.7)
 
 GEM
