@@ -11,6 +11,7 @@ end
 
 task :clean do
     system "gem uninstall github-fastforward"
+    system "rm *.gem"
 end
 
 task :publish do
