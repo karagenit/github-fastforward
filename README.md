@@ -4,7 +4,7 @@ Automatically Add Upstream Branch & Rebase Current Branch
 
 ## Building
 
-Requires github-upstream 1.1.3 or newer to be installed.
+Requires Octokit ~> 4.7
 
 ### Notes
 
