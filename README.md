@@ -6,6 +6,8 @@ Automatically Add Upstream Branch & Rebase Current Branch
 
 Requires Octokit ~> 4.7
 
+If you wish to use `rake publish`, you need to install `github_changelog_generator`. 
+
 ### Notes
 
 You can add a git repo as a dependency to your `Gemfile` and it will be fetched when `bundle install` is run. However, the gem isn't installed like a normal gem, and when you run `gem build .gemspec` the util that was built won't really work because your repo won't be found by `require` - probably because you need to list the repo in the `.gemspec` but I have no idea how to do this...

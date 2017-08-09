@@ -20,6 +20,7 @@ task :publish do
     vers = STDIN.gets.chomp
     IO.write('version.txt', vers)
     system "rake build"
+    system "github_changelog_generator"
     system "git commit -am \"Update Version\""
     system "git tag -a v" + vers + " -m \"\""
 end
