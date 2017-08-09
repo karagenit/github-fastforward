@@ -2,7 +2,7 @@
 
 require "rubygems"
 require "bundler/setup"
-require "upstream"
+require "octokit"
 
 parent = "upstream"
 repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp
@@ -11,10 +11,13 @@ unless `git remote`.include? parent
 
     puts "Adding remote #{parent}..."
 
-    url = get_upstream(repo)
-
-    if url == nil
+    begin
+        url = Octokit.repo(repo)[:parent][:html_url]
+    rescue NoMethodError
         puts "Not a fork!"
+        exit
+    rescue StandardError
+        puts "Could not find repo!"
         exit
     end
 

@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
     s.executables   << 'github-fastforward'
     s.platform      = Gem::Platform::RUBY
 
+    s.add_runtime_dependency     'octokit',     '~> 4.7'
     s.add_development_dependency 'bundler',     '~> 1.15'
     s.add_development_dependency 'rake',        '~> 12.0'
 end
