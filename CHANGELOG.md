@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
-
-[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v1.0.0...HEAD)
+## [v1.0.1](https://github.com/karagenit/github-fastforward/tree/v1.0.1) (2017-08-09)
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v1.0.0...v1.0.1)
 
 **Closed issues:**
 
