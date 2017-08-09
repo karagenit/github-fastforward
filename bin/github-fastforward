@@ -5,6 +5,12 @@ require "bundler/setup"
 require "octokit"
 
 parent = "upstream"
+
+unless system "git rev-parse --git-dir > /dev/null 2>&1"
+    puts "Not in a git repo!"
+    exit
+end
+
 repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp
 
 unless `git remote`.include? parent
