@@ -5,46 +5,46 @@ require 'octokit'
 parent = 'upstream'
 
 if ARGV[0] == '-a'
-    print 'Username: '
-    uname = STDIN.gets.chomp
-    print 'Password: '
-    pword = STDIN.gets.chomp
+  print 'Username: '
+  uname = STDIN.gets.chomp
+  print 'Password: '
+  pword = STDIN.gets.chomp
 end
 
 if ARGV[0] == '-u' && ARGV[2] == '-p'
-    uname = ARGV[1]
-    pword = ARGV[3]
+  uname = ARGV[1]
+  pword = ARGV[3]
 end
 
 if uname != nil && pword != nil
-    Octokit.configure do |conf|
-        conf.login = uname
-        conf.password = pword
-    end
+  Octokit.configure do |conf|
+    conf.login = uname
+    conf.password = pword
+  end
 end
 
 unless system 'git rev-parse --git-dir > /dev/null 2>&1'
-    puts 'Not in a git repo!'
-    exit
+  puts 'Not in a git repo!'
+  exit
 end
 
 repo = `git config --get remote.origin.url`.sub('https://github.com/', '').chomp
 
 unless `git remote`.include? parent
 
-    puts "Adding remote #{parent}..."
+  puts "Adding remote #{parent}..."
 
-    begin
-        url = Octokit.repo(repo)[:parent][:html_url]
-    rescue NoMethodError
-        puts 'Not a fork!'
-        exit
-    rescue StandardError
-        puts 'Could not find repo!'
-        exit
-    end
+  begin
+    url = Octokit.repo(repo)[:parent][:html_url]
+  rescue NoMethodError
+    puts 'Not a fork!'
+    exit
+  rescue StandardError
+    puts 'Could not find repo!'
+    exit
+  end
 
-    `git remote add #{parent} #{url}`
+  `git remote add #{parent} #{url}`
 end
 
 branch = `git rev-parse --abbrev-ref HEAD`.chomp
