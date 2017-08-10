@@ -1,5 +1,16 @@
 # Change Log
 
+## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
+
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.1.0...HEAD)
+
+**Closed issues:**
+
+- Authenticated Mode [\#9](https://github.com/karagenit/github-fastforward/issues/9)
+
+## [v2.1.0](https://github.com/karagenit/github-fastforward/tree/v2.1.0) (2017-08-10)
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.0.2...v2.1.0)
+
 ## [v2.0.2](https://github.com/karagenit/github-fastforward/tree/v2.0.2) (2017-08-10)
 [Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.0.1...v2.0.2)
 
