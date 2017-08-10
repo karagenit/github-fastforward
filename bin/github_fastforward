@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
 
-require "octokit"
+require 'octokit'
 
-parent = "upstream"
+parent = 'upstream'
 
-if ARGV[0] == "-a"
-    print "Username: "
+if ARGV[0] == '-a'
+    print 'Username: '
     uname = STDIN.gets.chomp
-    print "Password: "
+    print 'Password: '
     pword = STDIN.gets.chomp
 end
 
-if ARGV[0] == "-u" && ARGV[2] == "-p"
+if ARGV[0] == '-u' && ARGV[2] == '-p'
     uname = ARGV[1]
     pword = ARGV[3]
 end
@@ -23,8 +23,8 @@ if uname != nil && pword != nil
     end
 end
 
-unless system "git rev-parse --git-dir > /dev/null 2>&1"
-    puts "Not in a git repo!"
+unless system 'git rev-parse --git-dir > /dev/null 2>&1'
+    puts 'Not in a git repo!'
     exit
 end
 
@@ -37,10 +37,10 @@ unless `git remote`.include? parent
     begin
         url = Octokit.repo(repo)[:parent][:html_url]
     rescue NoMethodError
-        puts "Not a fork!"
+        puts 'Not a fork!'
         exit
     rescue StandardError
-        puts "Could not find repo!"
+        puts 'Could not find repo!'
         exit
     end
 
