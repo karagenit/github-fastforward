@@ -8,7 +8,9 @@ Automatically Add Upstream Branch & Rebase Current Branch
 
 ## Installation
 
-`gem install github_fastforward`
+```
+$ gem install github_fastforward
+```
 
 Will install the `octokit` gem if not already present.
 
