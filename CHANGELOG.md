@@ -1,5 +1,16 @@
 # Change Log
 
+## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
+
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.0.0...HEAD)
+
+**Closed issues:**
+
+- Cleanup Imports [\#10](https://github.com/karagenit/github-fastforward/issues/10)
+
+## [v2.0.0](https://github.com/karagenit/github-fastforward/tree/v2.0.0) (2017-08-09)
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v1.0.1...v2.0.0)
+
 ## [v1.0.1](https://github.com/karagenit/github-fastforward/tree/v1.0.1) (2017-08-09)
 [Full Changelog](https://github.com/karagenit/github-fastforward/compare/v1.0.0...v1.0.1)
 
