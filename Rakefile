@@ -1,12 +1,12 @@
 task :default => [:clean, :build, :test, :install]
 
 task :build do
-    system "bundle install"
-    system "gem build .gemspec"
+    sh "bundle install"
+    sh "gem build .gemspec"
 end
 
 task :install do
-    system "gem install github_fastforward-" + IO.read('version.txt') + ".gem"
+    sh "gem install github_fastforward-" + IO.read('version.txt') + ".gem"
 end
 
 task :clean do
@@ -15,7 +15,7 @@ task :clean do
 end
 
 task :test do
-    system "rubocop bin/"
+    sh "rubocop bin/"
 end
 
 task :publish do
@@ -23,7 +23,7 @@ task :publish do
     print "New Version: "
     vers = STDIN.gets.chomp
     IO.write('version.txt', vers)
-    system "rake build"
+    sh "rake build"
     system "github_changelog_generator"
     system "git commit -am \"Update Version\""
     system "git tag -a v" + vers + " -m \"\""
