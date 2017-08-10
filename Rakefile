@@ -1,4 +1,4 @@
-task :default => [:clean, :build, :install]
+task :default => [:clean, :build, :test, :install]
 
 task :build do
     system "bundle install"
@@ -12,6 +12,10 @@ end
 task :clean do
     system "gem uninstall github_fastforward"
     system "rm *.gem"
+end
+
+task :test do
+    system "rubocop bin/"
 end
 
 task :publish do
