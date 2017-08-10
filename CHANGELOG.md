@@ -1,5 +1,20 @@
 # Change Log
 
+## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
+
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.1.2...HEAD)
+
+**Closed issues:**
+
+- Rubocop Errors Don't Fail Travis Build [\#18](https://github.com/karagenit/github-fastforward/issues/18)
+
+## [v2.1.2](https://github.com/karagenit/github-fastforward/tree/v2.1.2) (2017-08-10)
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.1.1...v2.1.2)
+
+**Merged pull requests:**
+
+- Add Access Token Authentication [\#17](https://github.com/karagenit/github-fastforward/pull/17) ([karagenit](https://github.com/karagenit))
+
 ## [v2.1.1](https://github.com/karagenit/github-fastforward/tree/v2.1.1) (2017-08-10)
 [Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.1.0...v2.1.1)
 
