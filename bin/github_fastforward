@@ -16,9 +16,7 @@ if ARGV[0] == '-u' && ARGV[2] == '-p'
   pword = ARGV[3]
 end
 
-if ARGV[0] == "-t"
-  token = ARGV[1]
-end
+token = ARGV[1] if ARGV[0] == '-t'
 
 unless uname.nil? || pword.nil?
   Octokit.configure do |conf|
