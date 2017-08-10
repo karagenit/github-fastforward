@@ -38,22 +38,22 @@ To check for a remote upstream & to fetch/rebase to it:
 $ github_fastforward
 ```
 
-For an authentication prompt:
+For an authentication prompt (necessary for private repos):
 
 ```
 $ github_fastforward -a
-Username: #{github username}
-Password: #{github password}
+Username: #{github_username}
+Password: #{github_password}
 ```
 
 For authentication via command line:
 
 ```
-$ github_fastforward -u ${username} -p ${password}
+$ github_fastforward -u #{username} -p #{password}
 ```
 
 or:
 
 ```
-$ github_fastforward -t ${oauth_token}
+$ github_fastforward -t #{oauth_token}
 ```
