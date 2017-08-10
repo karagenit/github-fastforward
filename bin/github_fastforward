@@ -16,10 +16,20 @@ if ARGV[0] == '-u' && ARGV[2] == '-p'
   pword = ARGV[3]
 end
 
+if ARGV[0] == "-t"
+  token = ARGV[1]
+end
+
 unless uname.nil? || pword.nil?
   Octokit.configure do |conf|
     conf.login = uname
     conf.password = pword
+  end
+end
+
+unless token.nil?
+  Octokit.configure do |conf|
+    conf.access_token = token
   end
 end
 
