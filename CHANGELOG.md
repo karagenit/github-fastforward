@@ -1,11 +1,11 @@
 # Change Log
 
-## [Unreleased](https://github.com/karagenit/github-fastforward/tree/HEAD)
-
-[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.0.1...HEAD)
+## [v2.0.2](https://github.com/karagenit/github-fastforward/tree/v2.0.2) (2017-08-10)
+[Full Changelog](https://github.com/karagenit/github-fastforward/compare/v2.0.1...v2.0.2)
 
 **Closed issues:**
 
+- Add Changelog Generator as Dependency [\#15](https://github.com/karagenit/github-fastforward/issues/15)
 - Publish to RubyGems [\#14](https://github.com/karagenit/github-fastforward/issues/14)
 
 ## [v2.0.1](https://github.com/karagenit/github-fastforward/tree/v2.0.1) (2017-08-10)
