@@ -2,7 +2,9 @@
 
 Automatically Add Upstream Branch & Rebase Current Branch
 
-[![Build Status](https://travis-ci.org/karagenit/github-fastforward.svg?branch=master)](https://travis-ci.org/karagenit/github-fastforward)
+[![Travis CI](https://img.shields.io/travis/karagenit/github-fastforward.svg?style=flat-square)](https://travis-ci.org/karagenit/github-fastforward)
+[![Gem Version](https://img.shields.io/gem/v/github_fastforward.svg?style=flat-square)](https://rubygems.org/gems/github_fastforward)
+[![Gem](https://img.shields.io/gem/dt/github_fastforward.svg?style=flat-square)](https://rubygems.org/gems/github_fastforward)
 
 ## Building
 
